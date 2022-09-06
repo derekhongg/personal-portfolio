@@ -1,18 +1,18 @@
-import logo from './logo.svg';
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import D from '../../client/src/assets/images/logo1.png'
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
       <>
       <Routes>
-        <Route path="/" element={<Layout/>}/>
+        <Route path="/" element={<Layout />}>
+          <Route element={<Home />}/>
+        </Route>
       </Routes>
       </>
-      <img src={D}></img>
     </div>
   );
 }

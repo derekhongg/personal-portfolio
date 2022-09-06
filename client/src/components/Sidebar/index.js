@@ -1,11 +1,22 @@
 import './index.scss'
 import { Link, NavLink } from 'react-router-dom'
-import D from '../../assets/images/logo1.png'
-import DH from '../../assets/images/logo2.png'
 import Logo from '../../assets/images/DH.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser, faSuitcase } from '@fortawesome/free-solid-svg-icons'
+import {
+    faHome,
+    faUser,
+    faEnvelope,
+    faSuitcase,
+    faBars,
+    faClose,
+    faLink,
+} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+import {
+    faLinkedin,
+    faGithub,
+    faInstagram
+} from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
     const [showNav, setShowNav] = useState(false);
@@ -44,6 +55,23 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </NavLink>
             </nav>
+            <ul>
+                <li>
+                    <a target="_blank" rel = "noreferrer" href="https://www.linkedin.com/in/derekhongg/">
+                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" rel = "noreferrer" href="https://github.com/derekhongg">
+                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e"/>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" rel = "noreferrer" href="https://www.instagram.com/derekhongg/">
+                        <FontAwesomeIcon icon={faInstagram} color="#4d4d4e"/>
+                    </a>
+                </li>
+            </ul>
         </div>
     )
 }
