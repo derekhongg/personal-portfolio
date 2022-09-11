@@ -4,11 +4,11 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import LogoTitle from '../../assets/images/dLogo.png'
 import './index.scss'
+import '../AnimatedLetters/index'
 
 const Home = () => {
-    const [letterClass, setLetterClass] = useState('text-animate')
-
-    const nameArray = ['e', 'r', 'e', 'k']
+    const [letterClass, setLetterClass] = useState('text-animate');
+    const nameArray = ['e', 'r', 'e', 'k'];
     const jobArray = [
         'w',
         'e',
@@ -24,7 +24,7 @@ const Home = () => {
         'e',
         'r',
         '.',
-    ]
+    ];
 
     useEffect(() => {
         return setTimeout(() => {
@@ -33,40 +33,30 @@ const Home = () => {
     }, [])
 
     return (
-        <>
-            <div className="container home-page">
-                <div className="text-zone">
-                    <h1>
-                        <span className={letterClass}>H</span>
-                        <span className={`${letterClass} _12`}>i,</span>
-                        <br />
-                        <span className={`${letterClass} _13`}>I</span>
-                        <span className={`${letterClass} _14`}>'m</span>
-                        <img
-                            src={LogoTitle}
-                            alt="Developer Name"
-                        />
-                        <AnimatedLetters
-                            letterClass={letterClass}
-                            strArray={nameArray}
-                            idx={15}
-                        />
-                        <br />
-                        <AnimatedLetters
-                            letterClass={letterClass}
-                            strArray={jobArray}
-                            idx={22}
-                        />
-                    </h1>
-                    <h2>Front End Developer / JavaScript Expert / Youtuber</h2>
-                    <Link to="/contact" className="flat-button">
-                        CONTACT ME
-                    </Link>
-                </div>
+        <div className='container home-page'>
+            <div className='text-zone'>
+                <h1>
+                    <span className={letterClass}>H</span>
+                    <span className={`${letterClass} _12`}>i, </span>
+                    <br/>
+                    <span className={`${letterClass} _13`}>I</span>
+                    <span className={`${letterClass} _14`}>'m</span>
+                    <img className='home-logo' src={LogoTitle} alt="developer" />
+                    <AnimatedLetters letterClass={letterClass}
+                    strArray={nameArray}
+                    idx={15}
+                    />
+                    <br />
+                    <AnimatedLetters letterClass={letterClass}
+                    strArray={jobArray}
+                    idx={22}
+                    />
+                </h1>
+                <h2>Frontend Developer</h2>
+                <Link to="/contact" className='flat-button'>Contact Me</Link>
             </div>
 
-            <Loader type="pacman" />
-        </>
+        </div>
     )
 }
 
