@@ -9,9 +9,16 @@ const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const nameArray = ['e', 'r', 'e', 'k'];
     const jobArray = [
-        'w',
-        'e',
-        'b',
+        'f',
+        'u',
+        'l',
+        'l',
+        '-',
+        's',
+        't',
+        'a',
+        'c',
+        'k',
         ' ',
         'd',
         'e',
@@ -55,7 +62,7 @@ const Home = () => {
                         idx={22}
                     />
                 </h1>
-                <h2>Fullstack Developer</h2>
+                <h2>Full-Stack Developer</h2>
                 <Link to="/contact" className='flat-button'>Contact Me</Link>
             </div>
         </div>
